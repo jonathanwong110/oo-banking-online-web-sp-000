@@ -22,7 +22,7 @@ class Transfer
       if amount < sender.balance
         sender.balance -= self.amount
         receiver.balance += self.amount
-        status = "complete"
+        self.status = "complete"
       else
          self.status = "rejected"
          "Transaction rejected. Please check your account balance."
